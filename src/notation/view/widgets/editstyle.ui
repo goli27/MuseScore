@@ -7563,6 +7563,348 @@
                 </property>
                </spacer>
               </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="slurShoulderHeightLabel">
+                <property name="text">
+                 <string>Shoulder height (% of length):</string>
+                </property>
+                <property name="buddy">
+                 <cstring>slurShoulderHeight</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QDoubleSpinBox" name="slurShoulderHeight">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="specialValueText">
+                 <string>Auto</string>
+                </property>
+                <property name="suffix">
+                 <string>%</string>
+                </property>
+                <property name="decimals">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <double>50</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.5</double>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QToolButton" name="resetSlurShoulderHeight">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Shoulder height (% of length)' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="slurShoulderPositionLabel">
+                <property name="text">
+                 <string>Shoulder position (% from ends):</string>
+                </property>
+                <property name="buddy">
+                 <cstring>slurShoulderPosition</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QDoubleSpinBox" name="slurShoulderPosition">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="specialValueText">
+                 <string>Auto</string>
+                </property>
+                <property name="suffix">
+                 <string>%</string>
+                </property>
+                <property name="decimals">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <double>45</double>
+                </property>
+                <property name="singleStep">
+                 <double>1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QToolButton" name="resetSlurShoulderPosition">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Shoulder position (% from ends)' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="slurMinShoulderHeightLabel">
+                <property name="text">
+                 <string>Min. shoulder height:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>slurMinShoulderHeight</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QDoubleSpinBox" name="slurMinShoulderHeight">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string>sp</string>
+                </property>
+                <property name="decimals">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <double>20</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <widget class="QToolButton" name="resetSlurMinShoulderHeight">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Min. shoulder height' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="slurMaxShoulderHeightLabel">
+                <property name="text">
+                 <string>Max. shoulder height (short slurs):</string>
+                </property>
+                <property name="buddy">
+                 <cstring>slurMaxShoulderHeight</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QDoubleSpinBox" name="slurMaxShoulderHeight">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string>sp</string>
+                </property>
+                <property name="decimals">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <double>20</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="2">
+               <widget class="QToolButton" name="resetSlurMaxShoulderHeight">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Max. shoulder height (short slurs)' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="slurMaxShoulderHeightLongLabel">
+                <property name="text">
+                 <string>Max. shoulder height (long slurs):</string>
+                </property>
+                <property name="buddy">
+                 <cstring>slurMaxShoulderHeightLong</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QDoubleSpinBox" name="slurMaxShoulderHeightLong">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string>sp</string>
+                </property>
+                <property name="decimals">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <double>20</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="2">
+               <widget class="QToolButton" name="resetSlurMaxShoulderHeightLong">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Max. shoulder height (long slurs)' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="slurShortLengthLabel">
+                <property name="text">
+                 <string>Short slur up to:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>slurShortLength</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QDoubleSpinBox" name="slurShortLength">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string>sp</string>
+                </property>
+                <property name="decimals">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <double>200</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="2">
+               <widget class="QToolButton" name="resetSlurShortLength">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Short slur up to' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="slurLongLengthLabel">
+                <property name="text">
+                 <string>Long slur from:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>slurLongLength</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="1">
+               <widget class="QDoubleSpinBox" name="slurLongLength">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string>sp</string>
+                </property>
+                <property name="decimals">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <double>200</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="2">
+               <widget class="QToolButton" name="resetSlurLongLength">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Long slur from' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
@@ -7761,6 +8103,204 @@
                  </size>
                 </property>
                </spacer>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="tieShoulderHeightLabel">
+                <property name="text">
+                 <string>Shoulder height (% of length):</string>
+                </property>
+                <property name="buddy">
+                 <cstring>tieShoulderHeight</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QDoubleSpinBox" name="tieShoulderHeight">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="specialValueText">
+                 <string>Auto</string>
+                </property>
+                <property name="suffix">
+                 <string>%</string>
+                </property>
+                <property name="decimals">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <double>50</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.5</double>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QToolButton" name="resetTieShoulderHeight">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Shoulder height (% of length)' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="tieShoulderPositionLabel">
+                <property name="text">
+                 <string>Shoulder position (% from ends):</string>
+                </property>
+                <property name="buddy">
+                 <cstring>tieShoulderPosition</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QDoubleSpinBox" name="tieShoulderPosition">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="specialValueText">
+                 <string>Auto</string>
+                </property>
+                <property name="suffix">
+                 <string>%</string>
+                </property>
+                <property name="decimals">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <double>45</double>
+                </property>
+                <property name="singleStep">
+                 <double>1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QToolButton" name="resetTieShoulderPosition">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Shoulder position (% from ends)' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="tieMinShoulderHeightLabel">
+                <property name="text">
+                 <string>Min. shoulder height:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>tieMinShoulderHeight</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QDoubleSpinBox" name="tieMinShoulderHeight">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string>sp</string>
+                </property>
+                <property name="decimals">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <double>20</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <widget class="QToolButton" name="resetTieMinShoulderHeight">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Min. shoulder height' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="tieMaxShoulderHeightLabel">
+                <property name="text">
+                 <string>Max. shoulder height:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>tieMaxShoulderHeight</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QDoubleSpinBox" name="tieMaxShoulderHeight">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="keyboardTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string>sp</string>
+                </property>
+                <property name="decimals">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <double>20</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.1</double>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="2">
+               <widget class="QToolButton" name="resetTieMaxShoulderHeight">
+                <property name="toolTip">
+                 <string>Reset to default</string>
+                </property>
+                <property name="accessibleName">
+                 <string>Reset 'Max. shoulder height' value</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -14907,6 +15447,14 @@ first note of the system</string>
   <tabstop>resetSlurDottedLineWidth</tabstop>
   <tabstop>slurMinDistance</tabstop>
   <tabstop>resetSlurMinDistance</tabstop>
+  <tabstop>slurShoulderHeight</tabstop>
+  <tabstop>resetSlurShoulderHeight</tabstop>
+  <tabstop>slurShoulderPosition</tabstop>
+  <tabstop>resetSlurShoulderPosition</tabstop>
+  <tabstop>slurMinShoulderHeight</tabstop>
+  <tabstop>resetSlurMinShoulderHeight</tabstop>
+  <tabstop>slurMaxShoulderHeight</tabstop>
+  <tabstop>resetSlurMaxShoulderHeight</tabstop>
   <tabstop>tieEndLineWidth</tabstop>
   <tabstop>resetTieEndLineWidth</tabstop>
   <tabstop>tieMidLineWidth</tabstop>

@@ -528,6 +528,15 @@ enum class Sid {
     tiePlacementChord,
     tieMinShoulderHeight,
     tieMaxShoulderHeight,
+    tieShoulderHeight,       // shoulder height as fraction of tie length, 0 = automatic
+    tieShoulderPosition,     // shoulder distance from each end as fraction of tie length, 0 = automatic
+    slurShoulderHeight,      // shoulder height as fraction of slur length, 0 = automatic
+    slurShoulderPosition,    // shoulder distance from each end as fraction of slur length, 0 = automatic
+    slurMinShoulderHeight,   // limits for slurShoulderHeight
+    slurMaxShoulderHeight,   // max. for short slurs
+    slurMaxShoulderHeightLong, // max. for long slurs, interpolated in between
+    slurShortLength,         // slurs up to this length count as short
+    slurLongLength,          // slurs from this length on count as long
 
     sectionPause,
     musicalSymbolFont,
