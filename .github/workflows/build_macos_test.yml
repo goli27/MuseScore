@@ -17,9 +17,6 @@ on:
         default: ''
         required: false
 
-env:
-  # CURRENT_RELEASE_BRANCH: 4.3.2
-
 jobs:
   macos_universal:
     runs-on: macos-14
