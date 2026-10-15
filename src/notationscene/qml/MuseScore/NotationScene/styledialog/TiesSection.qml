@@ -134,6 +134,94 @@ StyledGroupBox {
             }
 
             StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Shoulder height (% of length, 0 = auto):")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.tieShoulderHeight.value * 100
+
+                minValue: 0.0
+                maxValue: 50
+                step: 0.5
+                decimals: 1
+                measureUnitsSymbol: "%"
+
+                onValueEdited: newValue => root.pageModel.tieShoulderHeight.value = newValue / 100
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.tieShoulderHeight
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Shoulder position (% from ends, 0 = auto):")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.tieShoulderPosition.value * 100
+
+                minValue: 0.0
+                maxValue: 45
+                step: 1
+                decimals: 1
+                measureUnitsSymbol: "%"
+
+                onValueEdited: newValue => root.pageModel.tieShoulderPosition.value = newValue / 100
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.tieShoulderPosition
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Min. shoulder height:")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.tieMinShoulderHeight.value
+
+                minValue: 0.0
+                maxValue: 20
+                step: 0.1
+                decimals: 2
+                measureUnitsSymbol: qsTrc("global", "sp")
+
+                onValueEdited: newValue => root.pageModel.tieMinShoulderHeight.value = newValue
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.tieMinShoulderHeight
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Max. shoulder height:")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.tieMaxShoulderHeight.value
+
+                minValue: 0.0
+                maxValue: 20
+                step: 0.1
+                decimals: 2
+                measureUnitsSymbol: qsTrc("global", "sp")
+
+                onValueEdited: newValue => root.pageModel.tieMaxShoulderHeight.value = newValue
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.tieMaxShoulderHeight
+            }
+
+            StyledTextLabel {
                 text: qsTrc("notation/editstyle/slursandties", "Minimum tie length:")
                 horizontalAlignment: Text.AlignLeft
             }

@@ -133,6 +133,160 @@ StyledGroupBox {
             StyleResetButton {
                 styleItem: root.pageModel.slurMinDistance
             }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Shoulder height (% of length, 0 = auto):")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.slurShoulderHeight.value * 100
+
+                minValue: 0.0
+                maxValue: 50
+                step: 0.5
+                decimals: 1
+                measureUnitsSymbol: "%"
+
+                onValueEdited: newValue => root.pageModel.slurShoulderHeight.value = newValue / 100
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.slurShoulderHeight
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Shoulder position (% from ends, 0 = auto):")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.slurShoulderPosition.value * 100
+
+                minValue: 0.0
+                maxValue: 45
+                step: 1
+                decimals: 1
+                measureUnitsSymbol: "%"
+
+                onValueEdited: newValue => root.pageModel.slurShoulderPosition.value = newValue / 100
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.slurShoulderPosition
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Min. shoulder height:")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.slurMinShoulderHeight.value
+
+                minValue: 0.0
+                maxValue: 20
+                step: 0.1
+                decimals: 2
+                measureUnitsSymbol: qsTrc("global", "sp")
+
+                onValueEdited: newValue => root.pageModel.slurMinShoulderHeight.value = newValue
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.slurMinShoulderHeight
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Max. shoulder height (short slurs):")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.slurMaxShoulderHeight.value
+
+                minValue: 0.0
+                maxValue: 20
+                step: 0.1
+                decimals: 2
+                measureUnitsSymbol: qsTrc("global", "sp")
+
+                onValueEdited: newValue => root.pageModel.slurMaxShoulderHeight.value = newValue
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.slurMaxShoulderHeight
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Max. shoulder height (long slurs):")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.slurMaxShoulderHeightLong.value
+
+                minValue: 0.0
+                maxValue: 20
+                step: 0.1
+                decimals: 2
+                measureUnitsSymbol: qsTrc("global", "sp")
+
+                onValueEdited: newValue => root.pageModel.slurMaxShoulderHeightLong.value = newValue
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.slurMaxShoulderHeightLong
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Short slur up to:")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.slurShortLength.value
+
+                minValue: 0.0
+                maxValue: 200
+                step: 1
+                decimals: 2
+                measureUnitsSymbol: qsTrc("global", "sp")
+
+                onValueEdited: newValue => root.pageModel.slurShortLength.value = newValue
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.slurShortLength
+            }
+
+            StyledTextLabel {
+                text: qsTrc("notation/editstyle/slursandties", "Long slur from:")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            IncrementalPropertyControl {
+                Layout.preferredWidth: 80
+                currentValue: root.pageModel.slurLongLength.value
+
+                minValue: 0.0
+                maxValue: 200
+                step: 1
+                decimals: 2
+                measureUnitsSymbol: qsTrc("global", "sp")
+
+                onValueEdited: newValue => root.pageModel.slurLongLength.value = newValue
+            }
+
+            StyleResetButton {
+                styleItem: root.pageModel.slurLongLength
+            }
         }
 
         ColumnLayout {

@@ -45,6 +45,17 @@ class SlursAndTiesPageModel : public AbstractStyleDialogModel
     Q_PROPERTY(mu::notation::StyleItem * tieDotsPlacement READ tieDotsPlacement CONSTANT)
     Q_PROPERTY(mu::notation::StyleItem * minLaissezVibLength READ minLaissezVibLength CONSTANT)
     Q_PROPERTY(mu::notation::StyleItem * laissezVibUseSmuflSym READ laissezVibUseSmuflSym CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * slurShoulderHeight READ slurShoulderHeight CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * slurShoulderPosition READ slurShoulderPosition CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * slurMinShoulderHeight READ slurMinShoulderHeight CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * slurMaxShoulderHeight READ slurMaxShoulderHeight CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * slurMaxShoulderHeightLong READ slurMaxShoulderHeightLong CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * slurShortLength READ slurShortLength CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * slurLongLength READ slurLongLength CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * tieShoulderHeight READ tieShoulderHeight CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * tieShoulderPosition READ tieShoulderPosition CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * tieMinShoulderHeight READ tieMinShoulderHeight CONSTANT)
+    Q_PROPERTY(mu::notation::StyleItem * tieMaxShoulderHeight READ tieMaxShoulderHeight CONSTANT)
 
     QML_ELEMENT
 
@@ -67,5 +78,16 @@ public:
     StyleItem* tieDotsPlacement() const;
     StyleItem* minLaissezVibLength() const;
     StyleItem* laissezVibUseSmuflSym() const;
+    StyleItem* slurShoulderHeight() const;
+    StyleItem* slurShoulderPosition() const;
+    StyleItem* slurMinShoulderHeight() const;
+    StyleItem* slurMaxShoulderHeight() const;
+    StyleItem* slurMaxShoulderHeightLong() const;
+    StyleItem* slurShortLength() const;
+    StyleItem* slurLongLength() const;
+    StyleItem* tieShoulderHeight() const;
+    StyleItem* tieShoulderPosition() const;
+    StyleItem* tieMinShoulderHeight() const;
+    StyleItem* tieMaxShoulderHeight() const;
 };
 }

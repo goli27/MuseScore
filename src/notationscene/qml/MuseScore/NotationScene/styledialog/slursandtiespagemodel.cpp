@@ -40,7 +40,18 @@ SlursAndTiesPageModel::SlursAndTiesPageModel(QObject* parent)
     StyleId::tiePlacementChord,
     StyleId::tieDotsPlacement,
     StyleId::minLaissezVibLength,
-    StyleId::laissezVibUseSmuflSym
+    StyleId::laissezVibUseSmuflSym,
+    StyleId::slurShoulderHeight,
+    StyleId::slurShoulderPosition,
+    StyleId::slurMinShoulderHeight,
+    StyleId::slurMaxShoulderHeight,
+    StyleId::slurMaxShoulderHeightLong,
+    StyleId::slurShortLength,
+    StyleId::slurLongLength,
+    StyleId::tieShoulderHeight,
+    StyleId::tieShoulderPosition,
+    StyleId::tieMinShoulderHeight,
+    StyleId::tieMaxShoulderHeight
 })
 {
 }
@@ -123,4 +134,59 @@ StyleItem* SlursAndTiesPageModel::minLaissezVibLength() const
 StyleItem* SlursAndTiesPageModel::laissezVibUseSmuflSym() const
 {
     return styleItem(StyleId::laissezVibUseSmuflSym);
+}
+
+StyleItem* SlursAndTiesPageModel::slurShoulderHeight() const
+{
+    return styleItem(StyleId::slurShoulderHeight);
+}
+
+StyleItem* SlursAndTiesPageModel::slurShoulderPosition() const
+{
+    return styleItem(StyleId::slurShoulderPosition);
+}
+
+StyleItem* SlursAndTiesPageModel::slurMinShoulderHeight() const
+{
+    return styleItem(StyleId::slurMinShoulderHeight);
+}
+
+StyleItem* SlursAndTiesPageModel::slurMaxShoulderHeight() const
+{
+    return styleItem(StyleId::slurMaxShoulderHeight);
+}
+
+StyleItem* SlursAndTiesPageModel::slurMaxShoulderHeightLong() const
+{
+    return styleItem(StyleId::slurMaxShoulderHeightLong);
+}
+
+StyleItem* SlursAndTiesPageModel::slurShortLength() const
+{
+    return styleItem(StyleId::slurShortLength);
+}
+
+StyleItem* SlursAndTiesPageModel::slurLongLength() const
+{
+    return styleItem(StyleId::slurLongLength);
+}
+
+StyleItem* SlursAndTiesPageModel::tieShoulderHeight() const
+{
+    return styleItem(StyleId::tieShoulderHeight);
+}
+
+StyleItem* SlursAndTiesPageModel::tieShoulderPosition() const
+{
+    return styleItem(StyleId::tieShoulderPosition);
+}
+
+StyleItem* SlursAndTiesPageModel::tieMinShoulderHeight() const
+{
+    return styleItem(StyleId::tieMinShoulderHeight);
+}
+
+StyleItem* SlursAndTiesPageModel::tieMaxShoulderHeight() const
+{
+    return styleItem(StyleId::tieMaxShoulderHeight);
 }

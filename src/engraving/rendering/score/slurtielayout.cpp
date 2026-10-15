@@ -2659,8 +2659,11 @@ void SlurTieLayout::computeBezier(TieSegment* tieSeg, PointF shoulderOffset)
 
     const double minShoulderHeight = tieSeg->minShoulderHeight();
     const double maxShoulderHeight = tieSeg->maxShoulderHeight();
-    double shoulderH = minShoulderHeight + _spatium * 0.3 * sqrt(std::abs(tieLengthInSp - 1));
-    shoulderH = std::clamp(shoulderH, minShoulderHeight, maxShoulderHeight);
+    const double heightRatio = tieSeg->style().styleD(Sid::tieShoulderHeight);
+    double shoulderH = heightRatio > 0.0
+                       ? heightRatio * tieEndNormalized.x()
+                       : minShoulderHeight + _spatium * 0.3 * sqrt(std::abs(tieLengthInSp - 1));
+    shoulderH = std::clamp(shoulderH, minShoulderHeight, std::max(minShoulderHeight, maxShoulderHeight));
 
     shoulderH -= shoulderOffset.y();
 
@@ -2672,7 +2675,8 @@ void SlurTieLayout::computeBezier(TieSegment* tieSeg, PointF shoulderOffset)
         shoulderH = -shoulderH;
     }
 
-    double shoulderW = 0.6; // TODO: style
+    const double tieShoulderPos = tieSeg->style().styleD(Sid::tieShoulderPosition);
+    double shoulderW = tieShoulderPos > 0.0 ? 1.0 - 2.0 * std::min(tieShoulderPos, 0.5) : 0.6;
 
     const double tieWidth = tieEndNormalized.x();
     const double bezier1X = (tieWidth - tieWidth * shoulderW) * .5 + shoulderOffset.x();
@@ -2786,6 +2790,11 @@ void SlurTieLayout::computeBezier(SlurSegment* slurSeg, PointF shoulderOffset)
         shoulderW = 0.7;
     }
 
+    const double slurShoulderPos = slurSeg->style().styleD(Sid::slurShoulderPosition);
+    if (slurShoulderPos > 0.0) {
+        shoulderW = 1.0 - 2.0 * std::min(slurShoulderPos, 0.5);
+    }
+
     double shoulderH = computeShoulderHeight(slurSeg, d, shoulderOffset);
 
     double c    = p2.x();
@@ -2873,7 +2882,20 @@ double SlurTieLayout::computeShoulderHeight(SlurSegment* slurSeg, double slurLen
     double shoulderH = sqrt(slurLengthInSp / 4) * spatium;
 
     static constexpr double shoulderReduction = 0.75;
-    if (isOverBeams(slurSeg->slur())) {
+    const double heightRatio = slurSeg->style().styleD(Sid::slurShoulderHeight);
+    if (heightRatio > 0.0) {
+        // shoulder height set by style as a fraction of the slur length
+        const double slurLength = slurLengthInSp * spatium;
+        const double minH = slurSeg->style().styleMM(Sid::slurMinShoulderHeight);
+        // maximum height interpolated between short and long slurs
+        const double shortLen = slurSeg->style().styleMM(Sid::slurShortLength);
+        const double longLen = slurSeg->style().styleMM(Sid::slurLongLength);
+        double t = longLen > shortLen ? (slurLength - shortLen) / (longLen - shortLen) : (slurLength >= longLen ? 1.0 : 0.0);
+        t = std::clamp(t, 0.0, 1.0);
+        const double maxH = (1.0 - t) * slurSeg->style().styleMM(Sid::slurMaxShoulderHeight)
+                            + t * slurSeg->style().styleMM(Sid::slurMaxShoulderHeightLong);
+        shoulderH = std::clamp(heightRatio * slurLength, minH, std::max(minH, maxH));
+    } else if (isOverBeams(slurSeg->slur())) {
         shoulderH *= shoulderReduction;
     }
 
